@@ -403,4 +403,27 @@ public class YanagishimaConfig {
 		}
 	}
 
+	public Optional<String> getDatabaseType() {
+		return Optional.ofNullable(properties.getProperty("database.type"));
+	}
+
+	public String getMysqlHost() {
+		return PropertiesUtil.getParam(properties, "mysql.host");
+	}
+
+	public String getMysqlPort() {
+		return PropertiesUtil.getParam(properties, "mysql.port");
+	}
+
+	public String getMysqlDatabase() {
+		return PropertiesUtil.getParam(properties, "mysql.database");
+	}
+
+	public String getMysqlUser() {
+		return PropertiesUtil.getParam(properties, "mysql.user");
+	}
+
+	public String getMysqlPassword() {
+		return PropertiesUtil.getParam(properties, "mysql.password");
+	}
 }
